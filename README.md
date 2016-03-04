@@ -64,9 +64,13 @@ b9f8690318a3be61767826d15b8c1784  RX-51_2009SE_20.2010.36-2_PR_COMBINED_MR0_ARM.
 
 #### Flashing Tool
 
-[Flasher-3.5](http://wiki.maemo.org/Documentation/Maemo_5_Developer_Guide/Development_Environment/Maemo_Flasher-3.5)
+[Flasher-3.5 Readme](tools/flasher-3.5/Readme_Maemo_Flasher-3.5.txt)
 
-*TODO: add links to mirrors*
+[Maemo Wiki](http://wiki.maemo.org/Documentation/Maemo_5_Developer_Guide/Development_Environment/Maemo_Flasher-3.5)
+
+Found in `tools/flasher-3.5` of this repository.
+
+[Source](http://web.archive.org/web/20131117084237/http://skeiron.org/tablets-dev/maemo_dev_env_downloads/)
 
 ##### Usage
 
@@ -80,16 +84,52 @@ b9f8690318a3be61767826d15b8c1784  RX-51_2009SE_20.2010.36-2_PR_COMBINED_MR0_ARM.
 extras
 extras-devel
 extras-testing
+```
 
-If you are looking for nokia / ovi repos...
+As of this time, the wiki says put the following in your `sources.list`:
+
+```
+# nokia is no more, muarf.org is private mirror
+#deb http://maemo.muarf.org/apt-mirror/mirror/downloads.maemo.nokia.com/fremantle/ssu/apps/ ./
+#deb http://maemo.muarf.org/apt-mirror/mirror/downloads.maemo.nokia.com/fremantle/ssu/mr0/ ./
+
+# This is another mirror for the same thing as those above. Temporarily OFFLINE
+#deb http://maemo.linenoise.info/downloads.maemo.nokia.com/fremantle/ssu/apps/ ./
+#deb http://maemo.linenoise.info/downloads.maemo.nokia.com/fremantle/ssu/mr0 ./
+# This mirror also includes OVI
+#deb http://maemo.linenoise.info/downloads.maemo.nokia.com/fremantle1.2/ovi/ ./
+
+
+
+# beware, extras is user contributed software:
+deb http://repository.maemo.org/extras/ fremantle free non-free
+# risky, enable only when needed:
+#deb http://repository.maemo.org/extras-testing/ fremantle free non-free
+#deb http://repository.maemo.org/extras-devel/ fremantle free non-free
+''
+## DO NOT INSTALL THIS REPO, IT'S AUTOINSTALLED BY CSSU-INSTALLER AND NOT MEANT TO GET INSTALLED MANUALLY!
+# are you a tester?
+#deb http://repository.maemo.org/community-testing/ fremantle free non-free
+```
+
+[Repository Wiki Page](http://wiki.maemo.org/Repository)
+                                            
+> If you are looking for nokia / ovi repos...
 that is another matter.
 
-I would suggest disabling your existing repos.
+> I would suggest disabling your existing repos.
 and enabling the repos from http://www.maemo-repos.com
 which have ALL the repos.
-```
+
 [Source](http://talk.maemo.org/showpost.php?p=1497359&postcount=2)
 
+#### Community Seamless Software Update (CSSU)
+
+> Seamless Software Update (SSU), is the term Nokia formerly used for over-the-air updates of Maemo (generally marketed as Maemo Update as of Maemo 5).
+
+> The Community Seamless Software Update (CSSU) is being developed by the Maemo community as a continuation of, and expansion on, Nokia's update support. It aims to deliver fixes which would be difficult to deliver through Extras (like core Maemo packages). It won't, however, bundle software which can (or could) be installed through the Extras repositories.
+
+[Community SSU Wiki Page](http://wiki.maemo.org/Community_SSU)
 
 ### Debugging
 
